@@ -19,13 +19,13 @@ This project is designed to check the status of website domains, using asynchron
 
 ## **Installation**
 
-1. Clone the Repository
+1. **Clone the Repository**
 
  First, clone the repository:
 
  git clone https://github.com/your-username/repository-name.git
 
-2. Install Dependencies
+2. **Install Dependencies**
 
 Install the project dependencies in a virtual environment:
 
@@ -39,52 +39,41 @@ Install the project dependencies in a virtual environment:
 
 ```
 
-3. Database Setup
-This project uses SQLAlchemy to interact with the database. Make sure to configure your database before running the application.
+3. **Database Setup**
 
-4. Running the Application
-To run the application, simply execute the main file:
+    This project uses SQLAlchemy to interact with the database. Make sure to configure your database before running the application.
 
-bash
-Copy code
-python app.py
+4. **Running the Application**
+ 
+ To run the application, simply execute the main file:
+
+```python
+
+python run.py
+
+```
+
 The API will be available at http://127.0.0.1:5000/ by default.
 
-API Endpoints
-1. /domain_ansync (GET)
-This endpoint performs an asynchronous check for multiple domains.
+## API Endpoints
 
-Example Request:
-bash
-Copy code
-GET http://127.0.0.1:5000/domain_ansync
-Response:
-json
-Copy code
-{
+1. **/domain_ansync (GET)**
+
+ This endpoint performs an asynchronous check for multiple domains.
+
+ Example Request:
+
+```python
+    
+    curl http://127.0.0.1:5000/domain_ansync
+
+```
+
+ Response:
+
+ {
     "message": "Domains scanned successfully"
-}
-Example Usage
-Domain Status Check
-To check the status of a domain, you can use the check_domain_async() function, which verifies the HTTP status and other relevant information.
+ }
 
-python
-Copy code
-from function.scan_playwrite import Function
-
-async def test_domain(domain):
-    status_code, has_content, country = await Function.check_domain_async(domain)
-    print(f"HTTP Status: {status_code}")
-    print(f"Page Content: {'Present' if has_content else 'Absent'}")
-    print(f"Country: {country}")
-Contributing
-Contributions are welcome! To contribute, follow these steps:
-
-Fork the repository.
-Create a new branch (git checkout -b feature-new).
-Make your changes and commit them (git commit -am 'Add new feature').
-Push to the branch (git push origin feature-new).
-Open a Pull Request.
-
-License
-This project is licensed under the MIT License.
+By: Ethercity
+Create: Guilherme Ribeiro
