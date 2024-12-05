@@ -1,6 +1,6 @@
 # **Project: Domain Status Checker**
 
-This project is designed to check the status of website domains, using asynchronous techniques to perform the verification efficiently and quickly. The system is capable of determining whether a domain is "ON" (online) or "OFF" (offline), and it also collects information such as HTTP status, page content, and other connectivity parameters.
+This project is designed to check the status of website domains, development on linux(ubuntu), using asynchronous techniques to perform the verification efficiently and quickly. The system is capable of determining whether a domain is "ON" (online) or "OFF" (offline), and it also collects information such as HTTP status, page content, and other connectivity parameters.
 
 ## **Features**
 
@@ -74,6 +74,7 @@ The API will be available at http://127.0.0.1:5000/ by default.
  {
     "message": "Domains scanned successfully"
  }
+
 
 By: Ethercity
 Create: Guilherme Ribeiro
