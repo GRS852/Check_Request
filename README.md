@@ -37,7 +37,7 @@ Install the project dependencies in a virtual environment:
 
  pip install -r requirements.txt
 
-´´´
+```
 
 3. Database Setup
 This project uses SQLAlchemy to interact with the database. Make sure to configure your database before running the application.
