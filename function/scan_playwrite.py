@@ -3,9 +3,9 @@ import asyncio
 from playwright.sync_api import sync_playwright
 from playwright.async_api import async_playwright
 
-class Function:
+class FunctionPlaywright:
     @staticmethod
-    def check_domain(domain):
+    def check_domain_playwright(domain):
 
         p = sync_playwright().start()  
         browser = p.chromium.launch()
@@ -34,7 +34,7 @@ class Function:
         return status_code, has_content, country
 
     @staticmethod
-    async def check_domain_async(domain):
+    async def check_domain_async_playriwright(domain):
         async with async_playwright() as p:  
             browser = await p.chromium.launch()
             page = await browser.new_page()
@@ -59,15 +59,3 @@ class Function:
                 await browser.close()
 
         return status_code, has_content, country
-    
-
-domain = 'marvelrivals.com'
-
-async def test_function(domain):
-
-    assincrona = await Function.check_domain_async(domain)
-
-    print (f"Função assincrona: {assincrona}")
-
-    return assincrona
-
